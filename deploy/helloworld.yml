@@ -1,15 +1,15 @@
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
-  strategy:
-    canary:
-      steps:
-      - setWeight: 20
-      - pause:
-          duration: "30s"
-      - setWeight: 50
-      - pause:
-          duration: "30s"
+strategy:
+  canary:
+    steps:
+    - setWeight: 20
+    - pause:
+        duration: "30s"
+    - setWeight: 50
+    - pause:
+        duration: "30s"
 metadata:
   namespace: apptest
   name: colorapi
